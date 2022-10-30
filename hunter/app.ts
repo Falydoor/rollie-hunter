@@ -17,12 +17,12 @@ let getWatches = async () => {
 
 let insertWatch = async (watch: any) => {
     console.log('Inserting', watch);
-    dynamodb.putItem({ TableName: 'roliehunter-watches', Item: watch }).promise();
+    dynamodb.putItem({ TableName: 'rolliehunter-watches', Item: watch }).promise();
 };
 
 let getWatch = async (id: string) => {
     console.log('Getting', id);
-    return dynamodb.getItem({ TableName: 'roliehunter-watches', Key: { id: id } }).promise();
+    return dynamodb.getItem({ TableName: 'rolliehunter-watches', Key: { id: id } }).promise();
 };
 
 let sendEmail = async (watch: any) => {
@@ -35,7 +35,7 @@ let sendEmail = async (watch: any) => {
     }).promise();
 };
 
-exports.handler = async event => {
+exports.handler = async (event: any) => {
     try {
         console.log('Getting watches');
         let watches = await getWatches();

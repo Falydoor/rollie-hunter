@@ -1,8 +1,8 @@
 {
-  "name": "rolie-hunter",
+  "name": "rollie-hunter",
   "version": "0.1.0",
   "bin": {
-    "rolie-hunter": "bin/rolie-hunter.js"
+    "rollie-hunter": "bin/rollie-hunter.js"
   },
   "scripts": {
     "build": "tsc",
