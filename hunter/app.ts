@@ -8,7 +8,7 @@ let getWatches = async () => {
     return res.data.results.map((watch: any) => {
         return {
             id: { S: watch.id },
-            desc: { S: watch.description },
+            desc: { S: watch.custom_field_2 },
             price: { N: watch.price },
             link: { S: watch.url }
         }
